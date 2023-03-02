@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telekocsi.css">
+    <title>Telekocsi</title>
+</head>
+
+<body>
+
+
+    <div class="tartalom">
+        <h1>Telekocsi</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="telekocsi.html">
+                        Bemutatkozás
+                    </a></li>
+                <li>Sofőröknek</li>
+                <li> Utasoknak</li>
+                <li>Bejelentkezés</li>
+                <li> Regisztráció</li>
+            </ul>
+        </div>
+        <h2>Regisztráció</h2>
+
+        Név:<input type="text"><br>
+        E-mail cím:<input type="email"><br>
+        Jelszó:<input id="jelszo1" type="password"><br>
+        Jelszó ismét:<input id="jelszo2" type="password"><br>
+        <input type="button" value="Mentés" onclick="mentes()">
+
+
+
+
+
+
+
+    </div>
+
+
+    <script>
+        function mentes() {
+            jel1 = document.getElementById("jelszo1").value;
+            jel2 = document.getElementById("jelszo2").value;
+            if (jel1 != "" && jel2 != "") {
+                if (jel1 == jel2) {
+                    alert("A beírt jelszók megegyeznek");
+                }
+                else {
+                    alert("A beírt jelszók nem egyeznek meg");
+                }
+            }
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

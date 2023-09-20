@@ -1,0 +1,78 @@
+npm install -g @angular/cli
+ng new
+ng g c
+ng serve
+
+export class MintaComponent {
+   //constructor(){}
+
+   //ngOnInit():void{}
+//Interpolation 							
+  szoveg:string="Szeretem az Angulart.";        
+  keszito:string="Fecske Benjámin"
+
+
+
+
+
+ //Property Binding- tulajdonság kötés
+  utvonal:string="https://www.w3schools.com/";
+
+  kepLink:string="https://www.w3schools.com/codegame/images/w3logo.png";
+  kepTitle:string="A W3Schools weboldalának megnyitása";
+  kepAlt:string="A W3Schools logo";
+  meret:number=200;
+
+
+
+
+  //Event Binding - eseméynhez rendelés
+  uzenet():void{
+    alert("Ez egy esemény üzenete!");
+  };
+
+
+
+
+  modosito():void{
+    this.kepLink="https://www.logolynx.com/images/logolynx/6c/6c9d2db39b1efe9a0ea89ab77b6dcf0c.jpeg"
+  };
+
+
+
+
+  //Kétirányú adatkötés--Two way data binding
+  //[(ngModel)]
+  aOldal:number=1;
+
+}
+
+
+BOOTSTRAP IMPORT ANGULARBA:
+styles.css ----> @import "~bootstrap/dist/css/bootstrap.css";
+
+VAGY SCRIPTBEN:
+angular.json ----> styleson belül:"./node_modules/bootstrap/dist/css/bootstrap.css",
+scripten belül:./node_modules/bootstrap/dist/js/bootstrap.js"
+               ./node_modules/jquerry/dist/jquery.js
+Aztán ugyan ezeket index.html-ben linkel a bootstrapet és scriptel mind a kettőt meghívni
+
+jquery-hez  $ VÁLTOZÓT declarálni kell component.ts-en belül ------> declare var $:any;
+
+NODEJS SZERVER:
+
+const http=require("http");
+
+const hostname="127.0.0.1";
+const port=3000;
+
+const server=http.createServer((req,res)=>{
+	res.statuscode=200;
+	res.setHeader("Content-type,","text/plain")
+	res.end("Szeretem a PROGRAMOZÁST")
+});
+
+server.listen(port,hostname,()=>{
+	console.log(`A szerver fut a http://${hostname}:${port}/címen`)
+})
+
